@@ -1,0 +1,10 @@
+print#!/bin/bash
+
+export CLASSPATH=.:lib/commons-csv-1.10.0.jar
+
+rm -f *.class
+
+javac MovieRating.java MovieDB.java
+java MovieRating "$@"
+
+rm -f *.class
